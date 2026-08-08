@@ -1,3 +1,0 @@
-command: tasks
-actionName: list-ready-tasks
-description: "Show tasks that are ready to work on"

@@ -1,9 +1,8 @@
 # Arts World
 
-A preconfigured world template for the Embabel appliance, tuned for the arts:
-new worlds created from it come with the **movie** and **impromptu** realms
-already installed (plus **research** — Wikipedia and Wikidata are half of any
-arts question).
+A world template for the Embabel appliance, tuned for the arts: worlds created
+from it start with the **movie** and **impromptu** realms installed (plus
+**research** — Wikipedia and Wikidata are half of any arts question).
 
 ## Use it
 
@@ -11,12 +10,19 @@ arts question).
 git clone https://github.com/embabel/appliance.git && cd appliance && ./me.py --world arts-world
 ```
 
-The template applies when a world is **first created** — an existing world is
-yours and is never reshaped by it.
+Applies when a world is **first created**; an existing world is never reshaped.
 
-## Shape
+## Why this repo is so small
 
-This is a world template in the same layout as
-[default-world](https://github.com/embabel/default-world): `config/` holds the
-world's declared surface (realms, types, views, behaviour…), `data/` its
-starting content. The realm list lives in `config/realms.yml`.
+It is a **delta, not a copy**. Every world resolves through the appliance's
+four-tier overlay — this world's own config, then the installation's, then the
+shared [default-world](https://github.com/embabel/default-world), then the
+product's baked-in defaults — first hit wins, and anything absent here falls
+through. So this repo declares only what makes the arts world *itself*: its
+realm list. Types, apps, behaviour, prompts and the rest are inherited live
+from the tiers below, and improvements to default-world reach arts worlds
+without this repo changing.
+
+The one non-overlaid file is `config/realms.yml`: the realm manifest is
+per-world, so it replaces the default list rather than extending it — which is
+why `research` is restated here.
