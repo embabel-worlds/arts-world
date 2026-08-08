@@ -1,0 +1,12 @@
+# The arts world's realms — installed automatically when a world is first
+# created from this template. Each entry is a git repo cloned into realms/{name}.
+- name: movie
+  repo: https://github.com/johnsonr/realm-movie.git
+  version: "main"
+- name: impromptu
+  repo: https://github.com/johnsonr/realm-impromptu.git
+  version: "main"
+# Research rides along: Wikipedia and Wikidata are half of any arts question.
+- name: research
+  repo: https://github.com/johnsonr/realm-research.git
+  version: "main"

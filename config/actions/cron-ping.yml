@@ -1,0 +1,10 @@
+stepType: action
+name: cron-ping
+description: "Say hello in chat"
+inputTypeNames:
+  - CronTrigger
+outputTypeName: com.embabel.agent.spec.model.BackgroundMessage
+canRerun: false
+pre:
+  - "spel:cronTrigger.name == 'cron-ping'"
+prompt: "Say hello in the chat, varying language. Choose one of French, English, German, Swedish, Danish, Italian, Spanish, Portuguese and Greek, at random."
