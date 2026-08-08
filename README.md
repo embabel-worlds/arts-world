@@ -2,7 +2,7 @@
 
 A world template for the Embabel appliance, tuned for the arts: worlds created
 from it start with the **movie** and **impromptu** realms installed (plus
-**research** — Wikipedia and Wikidata are half of any arts question).
+**research** — Wikipedia and Wikidata are half of any arts question, arriving through the default-world tier below).
 
 ## Use it
 
@@ -23,6 +23,15 @@ realm list. Types, apps, behaviour, prompts and the rest are inherited live
 from the tiers below, and improvements to default-world reach arts worlds
 without this repo changing.
 
-The one non-overlaid file is `config/realms.yml`: the realm manifest is
-per-world, so it replaces the default list rather than extending it — which is
-why `research` is restated here.
+Even `config/realms.yml` is a delta: realm manifests merge across the cascade
+tiers (user-first), so this file declares only movie and impromptu, and the
+default world's realms arrive through their own tier.
+
+This template also works as a PARENT — a world (or another template) can declare
+
+```yaml
+extends:
+  - arts-world
+```
+
+in its `config/world.yml` and inherit all of this live as a cascade tier.

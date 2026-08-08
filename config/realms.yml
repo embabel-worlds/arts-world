@@ -1,13 +1,10 @@
-# The arts world's realms — this file REPLACES the default world's list (the
-# realm manifest is per-world, not overlaid), so anything wanted from the
-# default set must be named here. Movie and impromptu are the point; research
-# rides along because Wikipedia and Wikidata are half of any arts question.
+# The arts world's realms. ONLY the delta: realm manifests merge across the
+# appliance's cascade tiers (user-first), so the default world's own realms
+# (research and friends) arrive through their tier — declaring them here would
+# just pin them.
 - name: movie
   repo: https://github.com/johnsonr/realm-movie.git
   version: "main"
 - name: impromptu
   repo: https://github.com/johnsonr/realm-impromptu.git
-  version: "main"
-- name: research
-  repo: https://github.com/johnsonr/realm-research.git
   version: "main"
